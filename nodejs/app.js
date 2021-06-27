@@ -23,7 +23,7 @@ app.get('/fibonacci/:number', function(req, res) {
   messager.sendMessage(message)
     .then(msg => {
       const result = JSON.parse(msg.toString());
-      res.json(result);
+      res.json({"number": number, "result": result});
     });
 });
 
